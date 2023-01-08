@@ -7,8 +7,8 @@
     When user input "standard_user" as userName and input "secret_sauce" as password
     Then user is redirected to inventory page
     When user choose "Name (Z to A)" as option for sorting the items
-    And user click add to cart button for "Test.allTheThings() T-Shirt (Red)" as productName
     And user click add to cart button for "Sauce Labs Onesie" as productName
+    And user click add to cart button for "Test.allTheThings() T-Shirt (Red)" as productName
     Then user see the cart bedge appeared
     When user click cart button
     Then user is redirected to cart page
