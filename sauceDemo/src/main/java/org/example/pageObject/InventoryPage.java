@@ -63,9 +63,9 @@ public class InventoryPage {
         cartBtn.click();
     }
 
-    public void clickMenuBtn(){
-        menuBtn.click();
-    }
+//    public void clickMenuBtn(){
+//        menuBtn.click();
+//    }
 
     public boolean cartBdgDisplayed(){
         return cartBedge.isDisplayed();

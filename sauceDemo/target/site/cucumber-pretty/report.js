@@ -13,14 +13,14 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 6169568000,
+  "duration": 4040316200,
   "status": "passed"
 });
 formatter.scenario({
   "line": 5,
-  "name": "Add an item to cart",
+  "name": "Checkout items with removing one item on cart page",
   "description": "",
-  "id": "checkout;add-an-item-to-cart",
+  "id": "checkout;checkout-items-with-removing-one-item-on-cart-page",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -41,96 +41,101 @@ formatter.step({
 });
 formatter.step({
   "line": 9,
+  "name": "user click add to cart button for \"Sauce Labs Bike Light\" as productName",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
   "name": "user choose \"Name (Z to A)\" as option for sorting the items",
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
+  "line": 11,
   "name": "user click add to cart button for \"Sauce Labs Onesie\" as productName",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
+  "line": 12,
   "name": "user click add to cart button for \"Test.allTheThings() T-Shirt (Red)\" as productName",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
-  "name": "user see the cart bedge appeared",
+  "line": 13,
+  "name": "user see the cart badge appeared",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 13,
+  "line": 14,
   "name": "user click cart button",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
+  "line": 15,
   "name": "user is redirected to cart page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 15,
-  "name": "\"Sauce Labs Onesie\" as productName appeared on card page",
-  "keyword": "Then "
-});
-formatter.step({
   "line": 16,
-  "name": "\"Test.allTheThings() T-Shirt (Red)\" as productName appeared on card page",
+  "name": "\"Sauce Labs Bike Light\" as productName appeared on card page",
   "keyword": "Then "
 });
 formatter.step({
   "line": 17,
+  "name": "\"Sauce Labs Onesie\" as productName appeared on card page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 18,
+  "name": "\"Test.allTheThings() T-Shirt (Red)\" as productName appeared on card page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 19,
   "name": "user click remove item for \"Test.allTheThings() T-Shirt (Red)\" as productName",
   "keyword": "And "
 });
 formatter.step({
-  "line": 18,
+  "line": 20,
   "name": "user click checkout button",
   "keyword": "When "
 });
 formatter.step({
-  "line": 19,
+  "line": 21,
   "name": "user is redirected to checkout step one page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 20,
+  "line": 22,
   "name": "user input \"Alifa\" as firstName and input \"Almira\" as lastName and input \"41235\" as zipCode for shipping information",
   "keyword": "When "
 });
 formatter.step({
-  "line": 21,
+  "line": 23,
   "name": "user is redirected to checkout step two page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 22,
-  "name": "user see the correct price for \"Sauce Labs Onesie\" as productName",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 23,
-  "name": "user see the correct tax for \"Sauce Labs Onesie\" as productName",
-  "keyword": "Then "
-});
-formatter.step({
   "line": 24,
-  "name": "user see the correct total",
+  "name": "user get the correct tax",
   "keyword": "Then "
 });
 formatter.step({
   "line": 25,
+  "name": "user get the correct total",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 26,
   "name": "user click finish button",
   "keyword": "When "
 });
 formatter.step({
-  "line": 26,
+  "line": 27,
   "name": "user is redirected to checkout complete",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 27,
+  "line": 28,
   "name": "user get \"THANK YOU FOR YOUR ORDER\" as gratMessage for gratitude message",
   "keyword": "Then "
 });
@@ -138,7 +143,7 @@ formatter.match({
   "location": "LoginSteps.verifyDisplay()"
 });
 formatter.result({
-  "duration": 1689023700,
+  "duration": 1682401700,
   "status": "passed"
 });
 formatter.match({
@@ -155,14 +160,27 @@ formatter.match({
   "location": "LoginSteps.inputCredential(String,String)"
 });
 formatter.result({
-  "duration": 1307099400,
+  "duration": 1269359200,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.verifyDisplayed()"
 });
 formatter.result({
-  "duration": 1050205300,
+  "duration": 1044251000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Sauce Labs Bike Light",
+      "offset": 35
+    }
+  ],
+  "location": "CheckoutSteps.addToCart(String)"
+});
+formatter.result({
+  "duration": 3058487600,
   "status": "passed"
 });
 formatter.match({
@@ -175,7 +193,7 @@ formatter.match({
   "location": "SortSteps.sortItem(String)"
 });
 formatter.result({
-  "duration": 3208241000,
+  "duration": 3168791700,
   "status": "passed"
 });
 formatter.match({
@@ -188,7 +206,7 @@ formatter.match({
   "location": "CheckoutSteps.addToCart(String)"
 });
 formatter.result({
-  "duration": 3058905600,
+  "duration": 3065214900,
   "status": "passed"
 });
 formatter.match({
@@ -201,28 +219,41 @@ formatter.match({
   "location": "CheckoutSteps.addToCart(String)"
 });
 formatter.result({
-  "duration": 3063530600,
+  "duration": 3059606800,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyBedge()"
 });
 formatter.result({
-  "duration": 1556616600,
+  "duration": 1540665100,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.clickCartBtn()"
 });
 formatter.result({
-  "duration": 3077567900,
+  "duration": 3082199400,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyPage()"
 });
 formatter.result({
-  "duration": 1630389300,
+  "duration": 1563903200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Sauce Labs Bike Light",
+      "offset": 1
+    }
+  ],
+  "location": "CheckoutSteps.verifyItems(String)"
+});
+formatter.result({
+  "duration": 1550602700,
   "status": "passed"
 });
 formatter.match({
@@ -235,7 +266,7 @@ formatter.match({
   "location": "CheckoutSteps.verifyItems(String)"
 });
 formatter.result({
-  "duration": 1550401000,
+  "duration": 1536770300,
   "status": "passed"
 });
 formatter.match({
@@ -248,7 +279,7 @@ formatter.match({
   "location": "CheckoutSteps.verifyItems(String)"
 });
 formatter.result({
-  "duration": 1546317800,
+  "duration": 1538141100,
   "status": "passed"
 });
 formatter.match({
@@ -261,21 +292,21 @@ formatter.match({
   "location": "CheckoutSteps.removeItem(String)"
 });
 formatter.result({
-  "duration": 3065239500,
+  "duration": 3066738500,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.clickCheckout()"
 });
 formatter.result({
-  "duration": 3081858600,
+  "duration": 3070470000,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyCOPage()"
 });
 formatter.result({
-  "duration": 1554515000,
+  "duration": 1556603200,
   "status": "passed"
 });
 formatter.match({
@@ -296,61 +327,42 @@ formatter.match({
   "location": "CheckoutSteps.inputInformation(String,String,String)"
 });
 formatter.result({
-  "duration": 3315417900,
+  "duration": 3325196200,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyCTPage()"
 });
 formatter.result({
-  "duration": 1545769600,
+  "duration": 1543880200,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Sauce Labs Onesie",
-      "offset": 32
-    }
-  ],
-  "location": "CheckoutSteps.verifyPrice(String)"
+  "location": "CheckoutSteps.verifyTax()"
 });
 formatter.result({
-  "duration": 1569042500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Sauce Labs Onesie",
-      "offset": 30
-    }
-  ],
-  "location": "CheckoutSteps.verifyTax(String)"
-});
-formatter.result({
-  "duration": 1568045100,
+  "duration": 1593179800,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyTotal()"
 });
 formatter.result({
-  "duration": 1584642900,
+  "duration": 1588043800,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.clickFnsBtn()"
 });
 formatter.result({
-  "duration": 3077267300,
+  "duration": 3086042700,
   "status": "passed"
 });
 formatter.match({
   "location": "CheckoutSteps.verifyCCPage()"
 });
 formatter.result({
-  "duration": 1545944800,
+  "duration": 1546777500,
   "status": "passed"
 });
 formatter.match({
@@ -363,11 +375,11 @@ formatter.match({
   "location": "CheckoutSteps.verifyMessage(String)"
 });
 formatter.result({
-  "duration": 3040892500,
+  "duration": 3050667500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 732033200,
+  "duration": 694758400,
   "status": "passed"
 });
 });

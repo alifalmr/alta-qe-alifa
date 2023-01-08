@@ -23,7 +23,7 @@ public class CheckoutSteps {
         Thread.sleep(3000);
     }
 
-    @Then("user see the cart bedge appeared")
+    @Then("user see the cart badge appeared")
     public void verifyBedge() throws InterruptedException {
         InventoryPage inventoryPage = new InventoryPage(webDriver);
         Assert.assertTrue(inventoryPage.cartBdgDisplayed());
@@ -97,25 +97,25 @@ public class CheckoutSteps {
         Thread.sleep(1500);
     }
 
-    @Then("user see the correct price for \"(.*)\" as productName")
-    public void verifyPrice(String productName) throws InterruptedException {
-        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(webDriver);
-        Assert.assertEquals(checkoutTwoPage.getPrice(productName),checkoutTwoPage.getItemTotal(),0.009);
+//    @Then("user see the correct price for \"(.*)\" as productName")
+//    public void verifyPrice(String productName) throws InterruptedException {
+//        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(webDriver);
+//        Assert.assertEquals(checkoutTwoPage.getPrice(productName),checkoutTwoPage.getItemTotal(),0.009);
+//
+//        Thread.sleep(1500);
+//    }
 
-        Thread.sleep(1500);
-    }
-
-    @Then("user see the correct tax for \"(.*)\" as productName")
-    public void verifyTax(String productName) throws InterruptedException {
+    @Then("user get the correct tax")
+    public void verifyTax() throws InterruptedException {
         CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(webDriver);
-        double tax = checkoutTwoPage.getPrice(productName) * 0.08;
+        double tax = checkoutTwoPage.getItemTotal() * 0.08;
         double calTax = Math.round(tax * 100) / 100.0;
         Assert.assertEquals(calTax,checkoutTwoPage.getTax(),0.009);
 
         Thread.sleep(1500);
     }
 
-    @Then("user see the correct total")
+    @Then("user get the correct total")
     public void verifyTotal() throws InterruptedException {
         CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(webDriver);
         double getTotal = checkoutTwoPage.getItemTotal() + checkoutTwoPage.getTax();
