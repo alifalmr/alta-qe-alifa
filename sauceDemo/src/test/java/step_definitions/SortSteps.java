@@ -15,13 +15,6 @@ public class SortSteps {
         this.webDriver = Hooks.webDriver;
     }
 
-//    @Given("user is on inventory page")
-//    public void verifyDisplayed() throws InterruptedException {
-//        InventoryPage inventoryPage = new InventoryPage(webDriver);
-//        Assert.assertTrue(inventoryPage.isDisplayed());
-//
-//        Thread.sleep(1000);
-//    }
     @When("user choose \"(.*)\" as option for sorting the items")
     public void sortItem(String option) throws InterruptedException {
         InventoryPage inventoryPage = new InventoryPage(webDriver);
